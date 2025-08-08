@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LogicRebel - Cyberpunk Coding Adventure</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="blockly-custom.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Roboto+Mono&display=swap">
+</head>
+<body>
+    <div class="cyberpunk-layout">
+        <!-- Top navigation bar -->
+        <header class="cyber-header">
+            <div class="header-content">
+                <h1 class="cyber-title">LOGIC<span class="glitch" data-text="REBEL">REBEL</span></h1>
+                <div class="title-sub">逻辑叛变</div>
+                <div class="level-info">
+                    <span id="level-id" class="level-id">关卡-01</span>
+                    <span id="level-name" class="level-name">首次任务</span>
+                </div>
+                <div class="coin-display">
+                    <span id="coin-counter" class="coin-counter">
+                        <span class="coin-icon">💾</span>
+                        <span id="collected-coins">0</span>/<span id="total-coins">0</span>
+                    </span>
+                </div>
+                <nav class="header-nav">
+                    <button id="run-button" class="cyber-button run-button">执行</button>
+                    <button id="reset-button" class="cyber-button reset-button">重置</button>
+                </nav>
+            </div>
+        </header>
+
+        <!-- Main content area -->
+        <div class="main-content">
+            <!-- Left panel - Blockly workspace -->
+            <div class="panel cyber-panel" id="blockly-panel">
+                <div class="panel-header">
+                    <h2 class="panel-title">代码矩阵</h2>
+                </div>
+                <div id="blockly-div" class="blockly-container"></div>
+            </div>
+
+            <!-- Right panel - Game view -->
+            <div class="panel cyber-panel" id="game-panel">
+                <div class="panel-header" style="display: flex; justify-content: space-between; align-items: center;">
+                    <h2 class="panel-title">模拟环境</h2>
+                    <div>
+                        <!-- <button id="preview-button" class="hint-button">预览</button> -->
+                        <button id="hint-button" class="hint-button">提示</button>
+                    </div>
+                </div>
+                <div class="level-description">
+                    <p id="level-description">收集所有数据卡并到达目标！</p>
+                </div>
+                <div id="game-container" class="game-container"></div>
+                <div id="coordinate-display" class="coordinate-display">鼠标悬停查看坐标</div>
+            </div>
+        </div>
+    </div>
+    
+    <div id="hint-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>关卡提示</h2>
+            <div id="hint-content"></div>
+        </div>
+    </div>
+
+    <script type="module" src="./main.ts"></script>
+</body>
+
+</html>

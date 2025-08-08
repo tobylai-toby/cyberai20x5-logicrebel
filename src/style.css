@@ -1,0 +1,590 @@
+/* Cyberpunk/Blue Dark Theme Styles */
+
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Roboto+Mono&display=swap');
+
+/* Base styles */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto Mono', monospace;
+  background-color: #0a0e17;
+  color: #e0e0ff;
+  overflow: hidden;
+  height: 100vh;
+}
+
+/* Cyberpunk layout container */
+.cyberpunk-layout {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  background: linear-gradient(135deg, #0c1424 0%, #121a2e 100%);
+}
+
+/* Header styles */
+.cyber-header {
+  background: linear-gradient(90deg, #0a1428 0%, #152238 100%);
+  border-bottom: 2px solid #00eeff;
+  box-shadow: 0 0 15px rgba(0, 238, 255, 0.3);
+  padding: 10px 20px;
+  position: relative;
+  z-index: 100;
+}
+
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 100%;
+}
+
+.cyber-title {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 24px;
+  font-weight: 700;
+  color: #00eeff;
+  text-shadow: 0 0 10px rgba(0, 238, 255, 0.7);
+  margin: 0;
+  letter-spacing: 2px;
+}
+
+.title-sub {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 14px;
+  color: #ff2a6d;
+  text-shadow: 0 0 5px rgba(255, 42, 109, 0.5);
+  margin-top: 2px;
+}
+
+.glitch {
+  position: relative;
+  color: #ff2a6d;
+  text-shadow: 0 0 5px #ff2a6d;
+}
+
+.glitch::before,
+.glitch::after {
+  content: attr(data-text);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.glitch::before {
+  left: 2px;
+  text-shadow: -2px 0 #00eeff;
+  clip: rect(44px, 450px, 56px, 0);
+  animation: glitch-anim 5s infinite linear alternate-reverse;
+}
+
+.glitch::after {
+  left: -2px;
+  text-shadow: -2px 0 #ff2a6d;
+  clip: rect(44px, 450px, 56px, 0);
+  animation: glitch-anim2 5s infinite linear alternate-reverse;
+}
+
+@keyframes glitch-anim {
+  0% {
+    clip: rect(32px, 9999px, 28px, 0);
+  }
+  5% {
+    clip: rect(13px, 9999px, 37px, 0);
+  }
+  10% {
+    clip: rect(40px, 9999px, 30px, 0);
+  }
+  15% {
+    clip: rect(10px, 9999px, 20px, 0);
+  }
+  20% {
+    clip: rect(42px, 9999px, 9px, 0);
+  }
+  25% {
+    clip: rect(36px, 9999px, 18px, 0);
+  }
+  30% {
+    clip: rect(38px, 9999px, 42px, 0);
+  }
+  35% {
+    clip: rect(20px, 9999px, 10px, 0);
+  }
+  40% {
+    clip: rect(12px, 9999px, 22px, 0);
+  }
+  45% {
+    clip: rect(28px, 9999px, 38px, 0);
+  }
+  50% {
+    clip: rect(2px, 9999px, 14px, 0);
+  }
+  55% {
+    clip: rect(34px, 9999px, 26px, 0);
+  }
+  60% {
+    clip: rect(16px, 9999px, 34px, 0);
+  }
+  65% {
+    clip: rect(8px, 9999px, 40px, 0);
+  }
+  70% {
+    clip: rect(44px, 9999px, 6px, 0);
+  }
+  75% {
+    clip: rect(18px, 9999px, 24px, 0);
+  }
+  80% {
+    clip: rect(30px, 9999px, 12px, 0);
+  }
+  85% {
+    clip: rect(6px, 9999px, 36px, 0);
+  }
+  90% {
+    clip: rect(26px, 9999px, 44px, 0);
+  }
+  95% {
+    clip: rect(14px, 9999px, 8px, 0);
+  }
+  100% {
+    clip: rect(32px, 9999px, 28px, 0);
+  }
+}
+
+@keyframes glitch-anim2 {
+  0% {
+    clip: rect(28px, 9999px, 10px, 0);
+  }
+  5% {
+    clip: rect(18px, 9999px, 30px, 0);
+  }
+  10% {
+    clip: rect(2px, 9999px, 8px, 0);
+  }
+  15% {
+    clip: rect(24px, 9999px, 38px, 0);
+  }
+  20% {
+    clip: rect(40px, 9999px, 14px, 0);
+  }
+  25% {
+    clip: rect(4px, 9999px, 26px, 0);
+  }
+  30% {
+    clip: rect(16px, 9999px, 32px, 0);
+  }
+  35% {
+    clip: rect(36px, 9999px, 42px, 0);
+  }
+  40% {
+    clip: rect(20px, 9999px, 2px, 0);
+  }
+  45% {
+    clip: rect(10px, 9999px, 16px, 0);
+  }
+  50% {
+    clip: rect(42px, 9999px, 22px, 0);
+  }
+  55% {
+    clip: rect(6px, 9999px, 34px, 0);
+  }
+  60% {
+    clip: rect(38px, 9999px, 18px, 0);
+  }
+  65% {
+    clip: rect(12px, 9999px, 4px, 0);
+  }
+  70% {
+    clip: rect(8px, 9999px, 44px, 0);
+  }
+  75% {
+    clip: rect(22px, 9999px, 36px, 0);
+  }
+  80% {
+    clip: rect(14px, 9999px, 40px, 0);
+  }
+  85% {
+    clip: rect(34px, 9999px, 20px, 0);
+  }
+  90% {
+    clip: rect(44px, 9999px, 28px, 0);
+  }
+  95% {
+    clip: rect(26px, 9999px, 12px, 0);
+  }
+  100% {
+    clip: rect(28px, 9999px, 10px, 0);
+  }
+}
+
+/* Level info */
+.level-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.level-id {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 14px;
+  color: #00eeff;
+  text-shadow: 0 0 5px rgba(0, 238, 255, 0.5);
+  margin-bottom: 2px;
+}
+
+.level-name {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 18px;
+  color: #ff2a6d;
+  text-shadow: 0 0 5px rgba(255, 42, 109, 0.5);
+}
+
+/* Coin display */
+.coin-display {
+  display: flex;
+  align-items: center;
+}
+
+.coin-counter {
+  background: rgba(0, 0, 0, 0.7);
+  border: 1px solid #00eeff;
+  border-radius: 4px;
+  padding: 5px 10px;
+  display: flex;
+  align-items: center;
+  font-family: 'Orbitron', sans-serif;
+  font-size: 16px;
+  color: #ffdd57;
+  box-shadow: 0 0 8px rgba(0, 238, 255, 0.3);
+}
+
+.coin-icon {
+  margin-right: 5px;
+  font-size: 18px;
+}
+
+/* Navigation buttons */
+.header-nav {
+  display: flex;
+  gap: 10px;
+}
+
+.cyber-button {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  padding: 10px 20px;
+  background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+  color: #fff;
+  border: 1px solid #00eeff;
+  border-radius: 4px;
+  cursor: pointer;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 8px rgba(0, 238, 255, 0.3);
+  position: relative;
+  overflow: hidden;
+}
+
+.cyber-button.stop-button {
+  background: linear-gradient(135deg, #982a2a 0%, #721e1e 100%);
+  border: 1px solid #ff2a6d;
+  box-shadow: 0 0 8px rgba(255, 42, 109, 0.3);
+}
+
+.cyber-button.stop-button:hover {
+  background: linear-gradient(135deg, #721e1e 0%, #982a2a 100%);
+  box-shadow: 0 0 15px rgba(255, 42, 109, 0.5);
+}
+
+.cyber-button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(0, 238, 255, 0.4), transparent);
+  transition: 0.5s;
+}
+
+.cyber-button:hover::before {
+  left: 100%;
+}
+
+.cyber-button:hover {
+  background: linear-gradient(135deg, #2a5298 0%, #1e3c72 100%);
+  box-shadow: 0 0 15px rgba(0, 238, 255, 0.5);
+  transform: translateY(-2px);
+}
+
+.cyber-button:active {
+  transform: translateY(1px);
+}
+
+.cyber-button:disabled {
+  background: #555;
+  cursor: not-allowed;
+  box-shadow: none;
+  transform: none;
+  opacity: 0.6;
+}
+
+.cyber-button:disabled::before {
+  display: none;
+}
+
+.cyber-button:disabled:hover {
+  background: #555;
+  transform: none;
+}
+
+/* Add specific disabled style for stop button */
+.cyber-button.stop-button:disabled {
+  background: #999;
+  border-color: #999;
+  box-shadow: none;
+  opacity: 0.6;
+}
+
+/* Ensure disabled state is visible even when button is in stop-button state */
+.cyber-button.stop-button:disabled:hover {
+  background: #999;
+  transform: none;
+}
+
+/* Main content area */
+.main-content {
+  display: flex;
+  flex: 1;
+  overflow: hidden;
+}
+
+/* Panel styles */
+.panel {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  overflow: hidden;
+}
+
+.cyber-panel {
+  background: rgba(10, 15, 25, 0.7);
+  border: 1px solid #2a3a5a;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+#blockly-panel {
+  flex: 1;
+  border-right: 2px solid #00eeff;
+}
+
+#game-panel {
+  flex: 1;
+  position: relative;
+}
+
+/* Panel headers */
+.panel-header {
+  background: rgba(20, 30, 50, 0.9);
+  border-bottom: 1px solid #00eeff;
+  padding: 10px 15px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.panel-title {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 18px;
+  color: #00eeff;
+  margin: 0;
+  text-shadow: 0 0 5px rgba(0, 238, 255, 0.5);
+}
+
+/* Blockly container */
+.blockly-container {
+  flex: 1;
+  height: 100%;
+  width: 100%;
+  background: #0a0f1a;
+}
+
+/* Game container */
+.game-container {
+  flex: 1;
+  width: 100%;
+  height: 100%;
+  background: #0c1220;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Level description */
+.level-description {
+  padding: 10px 15px;
+  background: rgba(15, 25, 45, 0.8);
+  border-bottom: 1px solid #2a3a5a;
+  font-size: 14px;
+  color: #a0a0ff;
+  min-height: 50px;
+  display: flex;
+  align-items: center;
+}
+
+/* Coordinate display */
+.coordinate-display {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  background: rgba(0, 0, 0, 0.7);
+  color: #00eeff;
+  padding: 5px 10px;
+  border-radius: 4px;
+  font-family: 'Roboto Mono', monospace;
+  font-size: 12px;
+  border: 1px solid #00eeff;
+  box-shadow: 0 0 8px rgba(0, 238, 255, 0.3);
+  z-index: 100;
+}
+/* Toolbar styles */
+.toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  background-color: #2c3e50;
+  border-bottom: 1px solid #34495e;
+}
+
+.toolbar-left,
+.toolbar-center,
+.toolbar-right {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.toolbar-center {
+  flex: 1;
+  justify-content: center;
+}
+
+.toolbar-right {
+  justify-content: flex-end;
+}
+
+/* Hint button styles */
+.hint-button {
+  padding: 2px 6px;
+  font-size: 12px;
+  border-radius: 4px;
+  background: linear-gradient(45deg, #00ffff, #0088ff);
+  border: 1px solid #00ffff;
+  box-shadow: 0 0 5px #00ffff;
+  margin-left: 10px;
+  height: 20px;
+  line-height: 16px;
+  font-family: 'Orbitron', 'Courier New', monospace;
+  font-weight: bold;
+  color: #000;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.hint-button:hover {
+  background: linear-gradient(45deg, #0088ff, #00ffff);
+  box-shadow: 0 0 10px #00ffff;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .cyberpunk-layout {
+    flex-direction: column;
+  }
+  
+  .main-content {
+    flex-direction: column;
+  }
+  
+  #blockly-panel {
+    border-right: none;
+    border-bottom: 2px solid #00eeff;
+  }
+}
+
+/* Modal styles */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(3px);
+}
+
+.modal-content {
+  background: linear-gradient(135deg, #0a0f1a 0%, #121a2e 100%);
+  margin: 5% auto;
+  padding: 20px;
+  border: 1px solid #00eeff;
+  border-radius: 8px;
+  box-shadow: 0 0 20px rgba(0, 238, 255, 0.5);
+  width: 80%;
+  max-width: 600px;
+  max-height: 80vh;
+  overflow-y: auto;
+  position: relative;
+  font-family: 'Orbitron', sans-serif;
+  color: #e0e0ff;
+}
+
+.modal-content h2 {
+  color: #00eeff;
+  text-shadow: 0 0 5px rgba(0, 238, 255, 0.5);
+  margin-top: 0;
+  border-bottom: 1px solid #2a3a5a;
+  padding-bottom: 10px;
+}
+
+.modal-content ol, 
+.modal-content ul {
+  padding-left: 20px;
+}
+
+.modal-content li {
+  margin: 10px 0;
+}
+
+.close {
+  color: #ff5555;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  position: absolute;
+  right: 15px;
+  top: 10px;
+  cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+  color: #ff9999;
+}
+
+/* Blockly block highlight in hints */
+.blockly-highlight {
+  background-color: #444444;
+  border: 1px solid #00eeff;
+  border-radius: 3px;
+  padding: 2px 4px;
+  font-family: 'Courier New', monospace;
+  color: #00eeff;
+  box-shadow: 0 0 2px rgba(0, 238, 255, 0.5);
+}

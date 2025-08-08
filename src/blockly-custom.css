@@ -1,0 +1,8 @@
+/* Custom styles to override Blockly's default CDN references */
+
+/* Override for Blockly's media path - using local media instead of CDN */
+.blocklySvg {
+  background-image: none !important;
+}
+
+/* If there are any other specific styles needed to override CDN references, they can go here */
